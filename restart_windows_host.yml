@@ -1,7 +1,7 @@
-- name: Restart Host
+- name: Restart Windows Host
   hosts: all
   tasks:
-    - name: Print Hello World message
+    - name: Annouce Reboot
       ansible.builtin.debug:
         msg: "The current host is restarting now!"
     - name: Wait to restart
