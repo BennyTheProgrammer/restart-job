@@ -1,5 +1,6 @@
 - name: Restart Host
   hosts: all
+  become: true
   tasks:
     - name: Print Hello World message
       ansible.builtin.debug:

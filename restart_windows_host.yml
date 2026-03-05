@@ -1,0 +1,13 @@
+- name: Restart Host
+  hosts: all
+  tasks:
+    - name: Print Hello World message
+      ansible.builtin.debug:
+        msg: "The current host is restarting now!"
+    - name: Wait to restart
+      ansible.builtin.pause:
+        seconds: 3
+    - name: Reboot the machine
+      ansible.windows.win_reboot:
+        msg: "Reboot initiated by the playbook"
+        reboot_timeout: 130
